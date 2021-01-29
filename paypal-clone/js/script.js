@@ -1,3 +1,25 @@
+document.querySelectorAll('.logo').forEach(logo => {
+    logo.addEventListener('click', () => {
+        document.querySelector('.front__page').style.display = 'block'
+        document.querySelector('.login__page').style.display = 'none'
+        document.querySelector('.signup__page').style.display = 'none'
+    })
+})
+document.querySelectorAll('.login').forEach(loginBtn => {
+    loginBtn.addEventListener('click', () => {
+        document.querySelector('.front__page').style.display = 'none'
+        document.querySelector('.login__page').style.display = 'block'
+        document.querySelector('.signup__page').style.display = 'none'
+    })
+})
+document.querySelectorAll('.signup').forEach(signupBtn => {
+    signupBtn.addEventListener('click', () => {
+        document.querySelector('.front__page').style.display = 'none'
+        document.querySelector('.login__page').style.display = 'none'
+        document.querySelector('.signup__page').style.display = 'flex'
+    })
+})
+
 const dropdownItems = document.querySelectorAll('.dropdown__hover');
 
 dropdownItems.forEach(dropdownItem => {
@@ -10,3 +32,4 @@ dropdownItems.forEach(dropdownItem => {
         document.querySelector('.navbar__wrapper').style.background = 'none'
     })
 })
+
